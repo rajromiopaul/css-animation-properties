@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Animation Properties</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Animation Properties</h1>
+
+        <p>
+            This page demonstrates CSS animation properties,
+            keyframes, timing functions, directions and shorthand.
+        </p>
+
+
+        <!-- =====================================================
+             MAIN ANIMATION
+             ===================================================== -->
+
+        <section class="demo">
+
+            <h2>1. Complete Animation</h2>
+
+            <div class="box">
+                BOX
+            </div>
+
+            <br>
+
+            <code>
+    animation-name: moveBox;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-composition: replace;
+    animation-timeline: auto;
+    animation-range: normal;
+    animation-range-start: normal;
+    animation-range-end: normal;
+            </code>
+
+        </section>
+
+
+        <!-- =====================================================
+             FADE
+             ===================================================== -->
+
+        <section class="demo">
+
+            <h2>2. Fade Animation</h2>
+
+            <div class="fade">
+                FADE
+            </div>
+
+            <code>
+    animation-name: fadeAnimation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+            </code>
+
+        </section>
+
+
+        <!-- =====================================================
+             BOUNCE
+             ===================================================== -->
+
+        <section class="demo">
+
+            <h2>3. Cubic Bezier</h2>
+
+            <div class="bounce">
+                BOUNCE
+            </div>
+
+            <code>
+    animation-timing-function:
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            </code>
+
+        </section>
+
+
+        <!-- =====================================================
+             STEPS
+             ===================================================== -->
+
+        <section class="demo">
+
+            <h2>4. Steps Timing Function</h2>
+
+            <div class="steps">
+                STEPS
+            </div>
+
+            <code>
+    animation-timing-function:
+    steps(5, end);
+            </code>
+
+        </section>
+
+
+        <!-- =====================================================
+             REVERSE
+             ===================================================== -->
+
+        <section class="demo">
+
+            <h2>5. Reverse Direction</h2>
+
+            <div class="reverse">
+                REVERSE
+            </div>
+
+            <code>
+    animation-direction: reverse;
+            </code>
+
+        </section>
+
+
+        <!-- =====================================================
+             ALTERNATE
+             ===================================================== -->
+
+        <section class="demo">
+
+            <h2>6. Alternate Direction</h2>
+
+            <div class="alternate">
+                ALT
+            </div>
+
+            <code>
+    animation-direction: alternate;
+            </code>
+
+        </section>
+
+
+        <!-- =====================================================
+             PAUSED
+             ===================================================== -->
+
+        <section class="demo">
+
+            <h2>7. Paused Animation</h2>
+
+            <div class="paused">
+                PAUSE
+            </div>
+
+            <code>
+    animation-play-state: paused;
+            </code>
+
+        </section>
+
+
+        <!-- =====================================================
+             SHORTHAND
+             ===================================================== -->
+
+        <section class="demo">
+
+            <h2>8. Animation Shorthand</h2>
+
+            <div class="shorthand">
+                SHORT
+            </div>
+
+            <code>
+    animation:
+        moveBox
+        3s
+        ease-in-out
+        1s
+        infinite
+        alternate
+        both
+        running;
+            </code>
+
+        </section>
+
+
+        <!-- =====================================================
+             MULTIPLE ANIMATIONS
+             ===================================================== -->
+
+        <section class="demo">
+
+            <h2>9. Multiple Animations</h2>
+
+            <div class="multiple">
+                MULTI
+            </div>
+
+            <code>
+    animation:
+        spin 2s linear infinite,
+        pulse 1s ease-in-out infinite alternate;
+            </code>
+
+        </section>
+
+
+        <!-- =====================================================
+             HOVER / TRANSFORM
+             ===================================================== -->
+
+        <section class="demo">
+
+            <h2>10. Hover Animation</h2>
+
+            <div class="hover-box">
+                HOVER
+            </div>
+
+            <br>
+
+            <code>
+    transition:
+        transform 0.5s ease,
+        background 0.5s ease;
+    
+    :hover {
+        transform:
+            rotate(20deg)
+            scale(1.2);
+    }
+            </code>
+
+        </section>
+
+
+        <!-- =====================================================
+             ANIMATION PROPERTY REFERENCE
+             ===================================================== -->
+
+        <section class="demo">
+
+            <h2>Animation Property Reference</h2>
+
+            <code>
+    animation-name
+    → moveBox
+    
+    animation-duration
+    → 3s
+    
+    animation-timing-function
+    → ease
+    → linear
+    → ease-in
+    → ease-out
+    → ease-in-out
+    → step-start
+    → step-end
+    → steps()
+    → cubic-bezier()
+    
+    animation-delay
+    → 1s
+    
+    animation-iteration-count
+    → 1
+    → 2
+    → 3
+    → infinite
+    
+    animation-direction
+    → normal
+    → reverse
+    → alternate
+    → alternate-reverse
+    
+    animation-fill-mode
+    → none
+    → forwards
+    → backwards
+    → both
+    
+    animation-play-state
+    → running
+    → paused
+    
+    animation-composition
+    → replace
+    → add
+    → accumulate
+    
+    animation-timeline
+    → auto
+    → none
+    → scroll()
+    → view()
+    
+    animation-range
+    → normal
+    → 0% 100%
+    
+    animation-range-start
+    → normal
+    → 0%
+    → entry
+    → cover
+    
+    animation-range-end
+    → normal
+    → 100%
+    → entry
+    → cover
+            </code>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    min-width: 1000px;
+    margin: auto;
+}
+
+.demo {
+    margin: 30px 0;
+    padding: 30px;
+    background: #222;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.demo h2 {
+    margin-top: 0;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    background: dodgerblue;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.fade,
+.bounce,
+.steps,
+.reverse,
+.alternate,
+.paused,
+.shorthand,
+.multiple {
+    width: 80px;
+    height: 80px;
+    background: tomato;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+code {
+    display: block;
+    padding: 20px;
+    background: #000;
+    color: #00ff99;
+    border-radius: 10px;
+    white-space: pre-wrap;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hover-box {
+    width: 100px;
+    height: 100px;
+    background: purple;
+    transition:
+        transform 0.5s ease,
+        background 0.5s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover-box:hover {
+    transform:
+        rotate(20deg) scale(1.2);
+    background: orange;
+}
+
+.box {
+    animation-name: moveBox;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+@keyframes moveBox {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(300px) rotate(170deg) scale(1.3);
+    }
+
+    100% {
+        transform: translateX(0) rotate(360deg) scale(1);
+        opacity: 1;
+    }
+}
+
+.fade {
+    animation-name: fadeAnimation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.bounce {
+    animation-name: bounceAnimation;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounceAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.steps {
+    animation-name: stepsAnimation;
+    animation-duration: 3s;
+    animation-timing-function: steps(5, end);
+    animation-iteration-count: infinite;
+}
+
+@keyframes stepsAnimation {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(300px);
+    }
+}
+
+.reverse {
+    animation-name: reverseAnimation;
+    animation-duration: 3s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes reverseAnimation {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(300px);
+    }
+}
+
+.alternate {
+    animation-name: alternateAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes alternateAnimation {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}
+
+.paused {
+    animation-name: pausedAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+@keyframes pausedAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.shorthand {
+    animation: moveBox 3s ease-in-out 1s infinite alternate both;
+}
+
+.multiple {
+    animation:
+        spin 2s linear infinite,
+        pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
